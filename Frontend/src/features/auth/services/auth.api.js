@@ -2,7 +2,7 @@ import axios from "axios"
 
 
 const api = axios.create({
-    baseURL: "http://localhost:3000",
+    baseURL: "https://interview-app-1-pnbe.onrender.com",
     withCredentials: true
 })
 
