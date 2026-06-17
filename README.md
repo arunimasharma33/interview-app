@@ -1,4 +1,4 @@
-# InterviewMaster 🚀
+# InterviewMaster
 ### AI-Powered Interview Preparation & Resume Tailoring Platform
 
 InterviewMaster is a full-stack web application designed to help candidates prepare for job interviews. By analyzing job descriptions (JDs) and candidate profiles (resumes or self-descriptions), the platform leverages Google's Gemini 2.5 Flash model to generate personalized preparation strategies. This includes match scoring, highlighting key skill gaps, creating a day-by-day roadmap, compiling tailored question banks (both technical and behavioral), and rendering a custom, downloadable resume PDF.
