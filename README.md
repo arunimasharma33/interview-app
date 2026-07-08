@@ -1,169 +1,433 @@
-# InterviewMaster
-### AI-Powered Interview Preparation & Resume Tailoring Platform
+<div align="center">
 
-InterviewMaster is a full-stack web application designed to help candidates prepare for job interviews. By analyzing job descriptions (JDs) and candidate profiles (resumes or self-descriptions), the platform leverages Google's Gemini 2.5 Flash model to generate personalized preparation strategies. This includes match scoring, highlighting key skill gaps, creating a day-by-day roadmap, compiling tailored question banks (both technical and behavioral), and rendering a custom, downloadable resume PDF.
+#  InterviewMaster
 
----
+### **Your Personal AI Interview Coach**
 
-## 🌟 Key Features
+*An AI-powered platform that analyzes your resume against any Job Description, identifies skill gaps, creates personalized preparation roadmaps, generates interview questions, and builds ATS-friendly resumes.*
 
-1. **AI-Driven Mock Preparation Strategy**
-   - **Match Score**: Analyzes how well your profile aligns with a specific job description.
-   - **Skill Gap Analysis**: Identifies missing skills and rates their impact severity (`low`, `medium`, `high`).
-   - **Day-by-Day Roadmaps**: Tailors a day-by-day prep plan, providing targeted daily tasks.
+<br>
 
-2. **Custom Question Banks**
-   - **Technical Questions**: Generates direct technical interview questions with details on *why* they are asked (the interviewer's intent) and *how* to answer them (model answers).
-   - **Behavioral Questions**: Prepares behavioral prompts complete with detailed guidelines and key points to hit in your response.
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
+![Node](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js)
+![Express](https://img.shields.io/badge/Express-black?style=for-the-badge&logo=express)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb)
+![Gemini](https://img.shields.io/badge/Gemini_2.5_Flash-4285F4?style=for-the-badge&logo=google)
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge)
+![Puppeteer](https://img.shields.io/badge/Puppeteer-40B5A4?style=for-the-badge&logo=puppeteer)
 
-3. **ATS-Friendly Resume Tailoring**
-   - Automatically drafts and styles a customized resume based on the target job requirements.
-   - Uses Puppeteer on the backend to render the responsive HTML content into a clean, downloadable A4 PDF.
-
-4. **Secure Authentication & Management**
-   - Complete registration and login system with JWT tokens.
-   - Token blacklisting on logout for enhanced session security.
-   - Persistent history of previous preparation plans.
+</div>
 
 ---
 
-## 🛠️ Technology Stack
+# 🎥 Demo
 
-### Frontend
-- **Framework**: React 19 (via Vite)
-- **Routing**: React Router v7
-- **State Management**: React Context API
-- **Styling**: Vanilla CSS & Sass (SCSS)
-- **HTTP Client**: Axios
+> **Replace these with your own GIFs or screenshots**
 
-### Backend
-- **Runtime**: Node.js & Express
-- **Database**: MongoDB & Mongoose
-- **AI Core**: Google GenAI SDK (`@google/genai`) using the `gemini-2.5-flash` model
-- **Schema Validation**: Zod & `zod-to-json-schema` (enforces strict structure parsing from AI)
-- **File Parsing & Rendering**: `pdf-parse` (extracts text from uploaded PDF resumes) and `Puppeteer` (renders custom HTML resumes to high-quality PDFs)
-- **Security & Session**: JSON Web Tokens (JWT), `bcryptjs`, and HTTP-only cookies
+<p align="center">
+
+<img src="assets/main.png" width="95%">
+
+</p>
 
 ---
 
-## 📐 Architecture & Project Structure
+# ✨ Why InterviewMaster?
 
-The project is structured into a frontend client and a backend Express server, maintaining a clear separation of concerns.
+Most interview preparation platforms only generate questions.
 
-### Project Layout
+**InterviewMaster goes several steps further.**
+
+It acts as an AI Interview Coach that can:
+
+✅ Analyze Resume vs Job Description
+
+✅ Calculate Match Score
+
+✅ Detect Missing Skills
+
+✅ Build Personalized Preparation Roadmap
+
+✅ Generate Technical Questions
+
+✅ Generate Behavioural Questions
+
+✅ Explain Interviewer's Intent
+
+✅ Create ATS Optimized Resume
+
+✅ Export Resume as Professional PDF
+
+---
+
+#  Features
+
+<table>
+
+<tr>
+
+<td width="50%">
+
+### 🎯 Resume Match Analysis
+
+Upload your resume and compare it against any Job Description using Google's Gemini 2.5 Flash.
+
+</td>
+
+<td width="50%">
+
+### 📈 Skill Gap Detection
+
+Identifies missing technologies and classifies them by impact.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+### 🧠 AI Technical Questions
+
+Generates personalized interview questions with detailed model answers.
+
+</td>
+
+<td>
+
+### 💬 Behavioural Interview Prep
+
+STAR-based behavioural questions with guidance and expected talking points.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+### 📅 Personalized Study Roadmap
+
+Creates day-wise preparation plans based on remaining interview time.
+
+</td>
+
+<td>
+
+### 📄 ATS Resume Builder
+
+Automatically rewrites and generates an ATS-friendly resume PDF.
+
+</td>
+
+</tr>
+
+</table>
+
+---
+
+# 🖼️ Application Preview
+
+## Dashboard
+
+<img src="assets/main.png">
+
+---
+
+## Technical Questions
+
+<img src="assets/tech-q.png">
+
+---
+
+## Behavioral Questions
+
+<img src="assets/behave-q.png">
+
+---
+
+## Roadmap
+
+<img src="assets/roadmap.png">
+
+---
+
+## Resume Builder
+
+<img src="assets/resume.png">
+
+---
+
+# 🧠 AI Workflow
+
+```text
+                    User Input
+                         │
+        Resume + Job Description
+                         │
+                         ▼
+              Gemini 2.5 Flash Analysis
+                         │
+        ┌────────────────┼────────────────┐
+        ▼                ▼                ▼
+ Match Score      Skill Gap        Resume Parsing
+        │                │                │
+        └────────────────┼────────────────┘
+                         ▼
+         Interview Preparation Engine
+                         │
+        ┌────────────────┼────────────────┐
+        ▼                ▼                ▼
+ Technical Qs     Behavioural Qs     Study Roadmap
+                         │
+                         ▼
+               ATS Resume Generator
+                         │
+                         ▼
+                 Download PDF Resume
+```
+
+---
+
+# 🏗️ System Architecture
+
+<p align="center">
+
+<img src="assets/architecture.png" width="95%">
+
+</p>
+
+---
+
+# ⚡ Tech Stack
+
+| Frontend | Backend | AI | Database | Other |
+|-----------|----------|------|-----------|------------|
+| React 19 | Node.js | Gemini 2.5 Flash | MongoDB | JWT |
+| React Router | Express | Google GenAI SDK | Mongoose | Puppeteer |
+| Context API | REST APIs | Zod | Mongo Atlas | pdf-parse |
+| SCSS | Axios | JSON Schema | | Multer |
+
+---
+
+# 📂 Project Structure
 
 ```text
 resume_app/
-├── Backend/                 # Express backend server
-│   ├── src/
-│   │   ├── config/          # DB connection configuration
-│   │   ├── controllers/     # Controller handlers (auth, interview reports)
-│   │   ├── middlewares/     # Middlewares (auth verification, multer file uploads)
-│   │   ├── models/          # Mongoose database models (User, Report, Blacklist)
-│   │   ├── routes/          # Express route definitions
-│   │   ├── services/        # AI orchestration and PDF generation
-│   │   └── app.js           # App initialization
-│   ├── server.js            # Server entry point
-│   └── .env                 # Environment secrets template
-├── Frontend/                # Vite + React frontend client
-│   ├── src/
-│   │   ├── features/        # Feature-driven module breakdown
-│   │   │   ├── auth/        # Auth pages, components, services, context
-│   │   │   └── interview/   # Home, Reports, detailed boards, custom hooks
-│   │   ├── style/           # Global styles and layout sheets
-│   │   ├── App.jsx          # React app wrapper
-│   │   ├── app.routes.jsx   # Route registry
-│   │   └── main.jsx         # React DOM mount point
-│   ├── package.json
-│   └── vite.config.js
-└── package.json             # Workspace dependencies
-```
 
-### 4-Layer Frontend Architecture
-As outlined in the architecture plan, the React app uses a clean, separation-of-concerns layout:
-1. **UI Layer** (`features/*/pages`, `components`): Contains visual layout and handles UI states.
-2. **Hook Layer** (`features/*/hooks`): Manages component-level operations, connects services to React context, and prevents direct API calls inside visual components.
-3. **State Layer** (`features/*/*.context.jsx`): Centralized store context for global session user state and active interview plan states.
-4. **API Layer** (`features/*/services`): Direct HTTP client integrations utilizing Axios instance request/response handlers.
+├── Backend/
+│
+├── Frontend/
+│
+├── README.md
+│
+└── package.json
+```
 
 ---
 
-## ⚙️ Configuration & Setup
+# 🏛 Backend Architecture
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) (v18+ recommended)
-- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) (or a local MongoDB instance running)
-- [Google Gemini API Key](https://aistudio.google.com/)
+```
+Routes
 
-### 1. Clone & Install Workspace
-Navigate to the project root and install workspace dependencies:
-```bash
-npm install
+↓
+
+Controllers
+
+↓
+
+Services
+
+↓
+
+Gemini AI
+
+↓
+
+MongoDB
+
+↓
+
+Response
 ```
 
-### 2. Backend Environment Configuration
-Navigate to the `Backend` directory and configure the environment variables:
+---
+
+# ⚛ Frontend Architecture
+
+```
+UI Components
+
+↓
+
+Hooks
+
+↓
+
+Context API
+
+↓
+
+Services
+
+↓
+
+REST API
+```
+
+---
+
+# 📊 Project Highlights
+
+✔ Gemini 2.5 Flash Integration
+
+✔ Resume Parsing
+
+✔ AI-powered Match Score
+
+✔ AI Skill Gap Analysis
+
+✔ Personalized Interview Roadmaps
+
+✔ Behavioural + Technical Questions
+
+✔ ATS Resume Builder
+
+✔ PDF Resume Rendering
+
+✔ JWT Authentication
+
+✔ HTTP-only Cookies
+
+✔ Protected Routes
+
+✔ Modular React Architecture
+
+✔ RESTful Backend
+
+✔ Responsive UI
+
+✔ Feature-first Folder Structure
+
+---
+
+# 📦 Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/yourusername/interviewmaster.git
+
+cd interviewmaster
+```
+
+---
+
+## Install Backend
+
 ```bash
 cd Backend
-```
-Create a `.env` file (or edit the existing one) with the following structure:
-```env
-PORT=3000
-MONGO_URI=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/<database_name>
-JWT_SECRET=your_jwt_signing_secret_here
-GOOGLE_GENAI_API_KEY=your_gemini_api_key_here
-```
 
-Install backend dependencies:
-```bash
 npm install
 ```
 
-### 3. Frontend Installation
-Navigate to the `Frontend` directory:
+---
+
+## Install Frontend
+
 ```bash
 cd ../Frontend
+
 npm install
 ```
 
 ---
 
-## 🚀 Running the Application
+# 🔑 Environment Variables
 
-For a smooth local development workflow, run both servers concurrently:
+Create a `.env` file inside Backend.
 
-### Run Backend
-In the `Backend` directory:
-```bash
-npm run dev
+```env
+PORT=3000
+
+MONGO_URI=
+
+JWT_SECRET=
+
+GOOGLE_GENAI_API_KEY=
 ```
-The server will start running on `http://localhost:3000` (monitored with Nodemon).
-
-### Run Frontend
-In the `Frontend` directory:
-```bash
-npm run dev
-```
-The client app will launch at `http://localhost:5173`. Open this URL in your web browser.
 
 ---
 
-## 📡 API Reference
+# 🚀 Run Application
 
-### 🔐 Authentication (`/api/auth`)
+Backend
 
-| Method | Endpoint | Access | Description |
-|:---|:---|:---|:---|
-| **POST** | `/api/auth/register` | Public | Register a new user profile. Expects `username`, `email`, `password`. |
-| **POST** | `/api/auth/login` | Public | Authenticates credentials. Returns user detail and sets HTTP-only `token` cookie. |
-| **GET** | `/api/auth/logout` | Public | Clears token cookie and registers token to blacklist database. |
-| **GET** | `/api/auth/get-me` | Private | Fetches profile metadata of the currently logged-in user. |
+```bash
+npm run dev
+```
 
-### 💼 Interview Prep & Reports (`/api/interview`)
+Frontend
 
-| Method | Endpoint | Access | Description |
-|:---|:---|:---|:---|
-| **POST** | `/api/interview/` | Private | Analyzes input to generate a report. Accepts form-data with `jobDescription`, `title`, `selfDescription`, and `resume` (PDF file). |
-| **GET** | `/api/interview/` | Private | Fetches summary list of all reports previously generated by the logged-in user. |
-| **GET** | `/api/interview/report/:interviewId` | Private | Fetches full, structured details of a specific report. |
-| **POST** | `/api/interview/resume/pdf/:interviewReportId` | Private | Tailors a resume for the target job description and returns a downloadable PDF binary buffer. |
+```bash
+npm run dev
+```
+
+---
+
+# 📡 REST API
+
+| Method | Endpoint | Description |
+|----------|------------------------------|-----------------------------|
+| POST | /api/auth/register | Register User |
+| POST | /api/auth/login | Login |
+| GET | /api/auth/logout | Logout |
+| GET | /api/auth/get-me | Current User |
+| POST | /api/interview | Generate AI Report |
+| GET | /api/interview | Fetch Reports |
+| GET | /api/interview/report/:id | Get Full Report |
+| POST | /api/interview/resume/pdf/:id | Generate Resume PDF |
+
+---
+
+# 💡 Future Improvements
+
+- AI Mock Interviews
+
+- Voice Interview Simulator
+
+- Interview Performance Scoring
+
+- Company-specific Question Banks
+
+- Resume Version History
+
+- Team Collaboration
+
+- Dark / Light Themes
+
+---
+
+# 👩‍💻 Developed By
+
+## Arunima Sharma
+
+B.Tech Information Technology
+
+VIT Vellore
+
+LinkedIn: https://www.linkedin.com/in/arunimasharma2005/
+
+
+---
+
+<div align="center">
+
+### ⭐ If you found this project interesting, consider giving it a star!
+
+It motivates me to build more AI-powered applications.
+
+</div>
